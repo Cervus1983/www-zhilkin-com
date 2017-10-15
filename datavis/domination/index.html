@@ -1,0 +1,83 @@
+<html>
+	<head>
+		<title>Domination chart | Data visualisation | Mikhail Zhilkin</title>
+
+		<link rel="icon" href="http://www.zhilkin.com/mikhail_zhilkin.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="http://www.zhilkin.com/mikhail_zhilkin.ico" type="image/x-icon">
+
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet" type="text/css">
+		<link type="text/css" rel="stylesheet" href="../../common.css" />
+
+		<style>
+			body {
+				font-size: 16px;
+				max-width: 600px;
+				padding: 16px 0 0 40px;
+			}
+
+			#controls {
+				margin-left: 120px;
+			}
+
+				.plink {
+					color: blue;
+					cursor: pointer;
+					padding: 4px;
+					visibility: hidden; /* Hide at start-up */
+
+					/* Prevent text selection on double click */
+					-webkit-user-select: none; /* Chrome/Safari */
+					-moz-user-select: none; /* Firefox */
+					-ms-user-select: none; /* IE10+ */
+				}
+
+				#date {
+					text-align: center;
+				}
+
+
+			line {
+				shape-rendering: crispEdges;
+				vector-effect: non-scaling-stroke;
+			}
+
+			.lvlOrd .score {
+				font-size: 10px;
+			}
+		</style>
+
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-337280-6']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+
+	<body>
+		<script src='http://d3js.org/d3.v3.min.js'></script>
+
+		<p>Domination chart is&nbsp;an&nbsp;animated bar chart illustrating competition between two opponents across a&nbsp;set of&nbsp;&ldquo;battlegrounds.&rdquo;</p>
+
+		<p>In this example Alice and Bob are playing through levels of&nbsp;a&nbsp;game, trying to&nbsp;beat each other’s top score.</p>
+
+		<p>At&nbsp;first, Alice played alone. Bob joined&nbsp;in after a&nbsp;few days and took over some of&nbsp;the levels. However, after a&nbsp;short, but intense struggle, Alice is&nbsp;holding top score on&nbsp;all but one level.</p>
+
+		<p><br />Hover on&nbsp;a&nbsp;level to&nbsp;see the scores.</p>
+
+		<div='controls'><br />
+			<span id='rewind' class='plink'>&lArr;</span>
+			<span id='back' class='plink'>&larr;</span>
+			<span id='date'></span>
+			<span id='forward' class='plink'>&rarr;</span>
+			<span id='play' class='plink'>play</span>
+		</div>
+
+		<script src='plot.js'></script>
+	</body>
+</html>

@@ -1,0 +1,139 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+
+		<title>Sociotypograph 2</title>
+
+		<style>
+			html, body { height: 100% }
+
+			body {
+				font-family: Calibri, sans-serif;
+				margin: 0;
+				width: 1602px;
+			}
+
+			#left {
+				border-right: 1px dashed lightgray;
+				float: left;
+				min-height: 100%;
+				width: 400px;
+			}
+
+			#middle {
+				/* border-right: 1px dashed lightgray; */
+				float: left;
+				min-height: 100%;
+				width: 800px;
+			}
+
+			#right {
+				float: left;
+				width: 400px;
+				min-height: 100%;
+				margin-top: 40px;
+			}
+				#right h3 {
+					margin: 0;
+				}
+
+			.labelName {
+				/* fill: black; */
+				font-size: 16px;
+			}
+				.select1 { fill: firebrick; }
+				.select2 { fill: forestgreen; }
+				.select12 { fill: blueviolet; }
+
+			.labelRel {
+				fill: lightgray;
+				font-size: 12px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="left"></div>
+		<div id="middle"></div>
+		<div id="right"></div>
+
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+        <script src="socio.js"></script>
+
+		<script>
+			socio.width = 800
+			socio.height = 800
+
+			socio.svg = d3.select("#middle").append("svg")
+				.attr("width", socio.width)
+				.attr("height", socio.height),
+
+			socio.radius = 250
+
+			socio.slice = socio.svg.selectAll("g")
+				.data(socio.type)
+				.enter()
+				.append("g")
+
+				.on("click", function(d, i) {
+					if(socio.select1 === i) {
+						if(socio.select2 === i) {
+							socio.select1 = -1
+							socio.select2 = -1
+							socio.labelRel.text("")
+						} else {
+							socio.select2 = i
+						}
+					} else if(socio.select1 >= 0) {
+						if(socio.select2 === i) { socio.select2 = -1 } else { socio.select2 = i }
+					} else {
+						socio.select1 = i
+						socio.labelRel.text(function(d, i) { return socio.rel[socio.type[socio.select1].rel[i]].name })
+					}
+					socio.labelName.attr("class", function(d, i) {
+						if(i === socio.select1 && i === socio.select2) { return "labelName select12" }
+						else if(i === socio.select1) { return "labelName select1" }
+						else if(i === socio.select2) { return "labelName select2" }
+						else { return "labelName" }
+					})
+					if(socio.select1 >= 0 && socio.select2 >= 0) {
+						d3.select("#right").html(socio.rel[socio.type[socio.select1].rel[socio.select2]].desc)
+					} else if(socio.select1 >= 0) {
+						d3.select("#right").html(socio.type[socio.select1].desc)
+					} else { d3.select("#right").html("") }
+				})
+
+/*				.on("mouseover", function(d, i) {
+					socio.select1 = i
+					socio.labelRel.text(function(d, i) { return socio.rel[socio.type[socio.select1].rel[i]] })
+				}) 
+
+				.on("mouseout", function() {
+					socio.labelRel.text("")
+				}) */
+
+/*				socio.mark = socio.slice.append("circle")
+					.attr("cx", function(d, i) { return socio.width / 2 + Math.cos(2 * Math.PI / socio.type.length * (i + 0.5)) * socio.radius })
+					.attr("cy", function(d, i) { return socio.height / 2 - Math.sin(2 * Math.PI / socio.type.length * (i + 0.5)) * socio.radius })
+					.attr("r", 1)
+					.attr('stroke', 'red') */
+
+				socio.labelName = socio.slice.append("text")
+					.attr("text-anchor", "middle")
+					.attr("x", function(d, i) { return socio.width / 2 + Math.cos(2 * Math.PI / socio.type.length * (i + 0.5)) * socio.radius })
+					.attr("y", function(d, i) { return socio.height / 2 - Math.sin(2 * Math.PI / socio.type.length * (i + 0.5)) * socio.radius })
+					.attr("dy", -4)					
+					.attr("class", "labelName")
+					.text(function(d) { return d.name })
+
+				socio.labelRel = socio.slice.append("text")
+					.attr("text-anchor", "middle")
+					.attr("x", function(d, i) { return socio.width / 2 + Math.cos(2 * Math.PI / socio.type.length * (i + 0.5)) * socio.radius })
+					.attr("y", function(d, i) { return socio.height / 2 - Math.sin(2 * Math.PI / socio.type.length * (i + 0.5)) * socio.radius })
+					.attr("dy", 12)
+					.attr("class", "labelRel")
+					.text("")
+
+		</script>
+	</body>
+</html>

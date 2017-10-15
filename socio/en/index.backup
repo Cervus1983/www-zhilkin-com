@@ -1,0 +1,297 @@
+﻿<html>
+
+	<head>
+
+		<title>Sociotypograph — determine sociotype</title>
+		<meta name="title" content="Sociotypograph — determine sociotype" />
+		<meta name="description" content="Sociotypograph — determine your (or anyone else’s) sociotype using Reinin’s traits" />
+		<meta name="keywords" content="sociotype, determine sociotype, socionic type, determine socionic type, socionics, Reinin, Reinin trait, Reinin's trait, Reinin traits, Reinin's traits, individual traits, introvert, extravert, logical, ethical, intuitive, sensing, static, dynamic, positivist, negativist, questioner, declarer, tactical, strategic, constructivist, emotivist, diadic traits, rational, irrational, process, result, compliant, obstinate, carefree, farsighted, quadric traits, reasonable, resolute, subjectivist, objectivist, aristocratic, democratic, Don Quixote, Dumas, Hugo, Robespierre, Hamlet, Maxim Gorky, Zhukov, Yesenin, Napoleon, Balzac, Jack London, Dreiser, Stierlitz, Dostoyevsky, Huxley, Gabin, Seeker, Mediator, Enthusiast, Analyst, Mentor, Inspector, Marshal, Lyricist, Politician, Critic, Enterpriser, Guardian, Administrator, Humanist, Psychologist, Craftsman, Don Quixote (ILE), Dumas (SEI), Hugo (ESE), Robespierre (LII), Hamlet (EIE), Maxim Gorky (LSI), Zhukov (SLE), Yesenin (IEI), Napoleon (SEE), Balzac (ILI), Jack London (LIE), Dreiser (ESI), Stierlitz (LSE), Dostoyevsky (EII), Huxley (IEE), Gabin (SLI)" />
+		<meta name="author" content="Mikhail & Khelena Zh." />
+		<meta name="reply-to" content="mikhail@zhilkin.com" />
+		<meta name="home_url" content="http://www.zhilkin.com" />
+
+		<link rel="icon" href="../socio.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="../socio.ico" type="image/x-icon">
+
+		<link type="text/css" rel="stylesheet" href="../style.css" />
+
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-337280-6']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+
+		<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js'></script>
+
+		<script type='text/javascript'>//<![CDATA[ 
+			$(window).load(function(){
+				$(function() {
+					var a = function() {
+					var b = $(window).scrollTop();
+					var d = $("#scroller-anchor").offset({scroll:false}).top;
+					var c=$("#scroller");
+					if (b>d) {
+						c.css({position:"fixed",top:"0px"})
+					} else {
+						if (b<=d) {
+							c.css({position:"relative",top:""})
+						}
+					}
+				};
+				$(window).scroll(a);a()
+			});
+			});//]]>  
+		</script>
+
+		<script type="text/javascript" src="../interface.js"></script>
+		<script type="text/javascript" src="sociotypes.js"></script>
+
+	</head>
+
+	<body>
+
+		<div id="fb-root"></div>
+		<script>
+			(function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s); js.id = id;
+				js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+				fjs.parentNode.insertBefore(js, fjs);
+			}
+			(document, 'script', 'facebook-jssdk'));
+		</script>
+
+<!--		<hr style="position: fixed; top: 631; width: 100%;" />	-->
+
+		<script type="text/javascript" src="../init.js"></script>
+
+		<div id="language_selector"><a href="../ru/index.html" title="На русском">RU</a></div>
+
+		<div id="container">
+
+			<div id="header">
+				<a href="http://itunes.apple.com/us/app/isociotype/id558295363?ls=1&mt=8" title="iSociotype in App Store"><img class="appstore_badge" src="../appstore.png" alt="iSociotype in App Store" /></a>
+				<h1>Sociotypograph&nbsp;&mdash;</h1>
+				<h2>determine your (or anyone else’s) sociotype</h2>
+				<div id="header_left">
+					<p>Sociotype (or “type of information metabolism”) is the key concept of socionics&nbsp;&mdash; a theory of information processing, personality type and intertype relations in terms of psychological compatibility.</p>
+					<p>Sociotype is believed to define potential strengths and weaknesses of a person, as well as describe how he or she interacts with the surroundings and, in particular, with other people.</p>
+				</div>
+				<div id="header_right">
+					<p>If you’re new to this, read <a href="http://www.wikisocion.org/en/index.php?title=Introduction_to_socionics" title="Introduction to socionics" target="_blank">introduction to socionics</a></p>
+					<p>&nbsp;</p>
+					<p>Send your comments, questions and suggestions to&nbsp;<a href="mailto:mikhail@zhilkin.com">mikhail@zhilkin.com</a></p>
+				</div>
+			</div>
+
+			<br />
+
+			<div id="descr">
+				<div id="traits_descr">
+					<p>The table below contains <a href="http://www.wikisocion.org/en/index.php?title=Reinin_dichotomies" target="_blank" title="Reinin traits">Reinin traits</a>.<br />Choose 3 or 4 traits which match you (or&nbsp;someone you know) <i>for sure</i>, and you’ll determine your (or&nbsp;someone else’s) sociotype with a&nbsp;good accuracy.</p>
+					<p>Click to select. Click again to unselect. You can also <span class="quasilink" onClick="unselectAll()">unselect all traits</span>.<br />Only one trait in any pair can be selected (e.g. one can’t be both introvert and extravert).</p>
+					<p class="left_arrow">&darr;</p>
+				</div>
+				<div id="types_descr">
+					<p>The table below shows sociotypes that match the traits you’ve selected.</p>
+					<p>Hover on a sociotype to see all corresponding traits.<br />Click to select. Click again to unselect.</p>
+					<p class="right_arrow">&darr;</p>
+				</div>
+			</div>
+
+			<div id="traits">
+
+<table class="traits">
+	<tr><th colspan="4"><h3>Traits</h3></th></tr>
+	<tr><th colspan="4"><h4>Individual traits</h4></th></tr>
+	<tr>
+		<td id="d0" class="description" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Uses imagination and reflection rather than manipulates real objects. Focuses on relations between self and the outer world.</td>
+		<td id="0" class="trait" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Introvert</span></td>
+		<td id="1" class="trait" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Extravert</span></td>
+		<td id="d1" class="description" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Manipulates real objects, feelings, emotions and sensations rather than delves into a world of&nbsp;imagination. Focuses on the outer world and relations between its&nbsp;objects.</td>
+	</tr>
+	<tr>
+		<td id="d2" class="description" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Better perceives real objects and their relations, general principles and trends. Sees the world through the prism of rules and logical connections.</td>
+		<td id="2" class="trait" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Logical</td>
+		<td id="3" class="trait" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Ethical</td>
+		<td id="d3" class="description" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Better perceives feelings, emotions and concerns, as well as&nbsp;interpersonal relationships.</td>
+	</tr>
+	<tr>
+		<td id="d4" class="description" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Better perceives non-material side of the world&nbsp;&mdash; ideas, concepts, and the like. Quickly absorbs new information, but because of poor digestion doesn’t keep it in&nbsp;memory for too long.</td>
+		<td id="4" class="trait" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Intuitive</td>
+		<td id="5" class="trait" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Sensing</td>
+		<td id="d5" class="description" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Better perceives material side of the world&nbsp;&mdash; taste, color, and the like. Slowly absorbs new information, but thanks to good digestion keeps it in memory for a long time.</td>
+	</tr>
+	<tr>
+		<td id="d6" class="description" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Perceives reality as unrelated stills. Notices the state of&nbsp;an&nbsp;object or process at a given moment, but overlooks changes and trends in them.</td>
+		<td id="6" class="trait" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Static</td>
+		<td id="7" class="trait" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Dynamic</td>
+		<td id="d7" class="description" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Perceives reality as a series of&nbsp;interrelated events. Notices trends and changes in an object or&nbsp;process, but overlooks their state at a given moment.</td>
+	</tr>
+	<tr>
+		<td id="d8" class="description" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Sees what’s present rather than what’s absent. First of all, notices the positives&nbsp;&mdash; “The weather is&nbsp;good, the sky is clear.”</td>
+		<td id="8" class="trait" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Positive</td>
+		<td id="9" class="trait" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Negative</td>
+		<td id="d9" class="description" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Sees what’s absent rather than what’s present. First of all, notices the negatives&nbsp;&mdash; “The weather is&nbsp;not bad, not a cloud in the sky.”</td>
+	</tr>
+	<tr>
+		<td id="d10" class="description" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Typically speaks in questions. Prefers dialogues to monologues. Tends to use short remarks, because he or she is more interested in hearing the other person than self-expression.</td>
+		<td id="10" class="trait" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Asking</td>
+		<td id="11" class="trait" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Declaring</td>
+		<td id="d11" class="description" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Typically speaks in statements. Prefers monologues to dialogues. Tends to make detailed speeches, because he or she is more interested in self-expression than hearing the other person.</td>
+	</tr>
+	<tr>
+		<td id="d12" class="description" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Tends to make local decisions based on the current state of&nbsp;things. Cares more about the path, which is the order of steps and actions. Finds it easier to&nbsp;change the goal than the chosen tactics.</td>
+		<td id="12" class="trait" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Tactical</td>
+		<td id="13" class="trait" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Strategic</td>
+		<td id="d13" class="description" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Tends to make global decisions based on the prominent future. Cares more about the goal and the desired state of things. Finds it easier to set a goal than to decide on the next step.</td>
+	</tr>
+	<tr>
+		<td id="d14" class="description" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">First perceives the meaning, then the emotional implication. It’s not typical of him or her to adjust to&nbsp;the other person’s mood.</td>
+		<td id="14" class="trait" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Constructive</td>
+		<td id="15" class="trait" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Emotive</td>
+		<td id="d15" class="description" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">First perceives the emotional implication, then the meaning. It’s&nbsp;typical of him or her to adjust to&nbsp;the other person’s mood.</td>
+	</tr>
+	<tr><th colspan="4"><h4>Diadic traits</h4></th></tr>
+	<tr>
+		<td id="d16" class="description" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">First assesses the incoming information, then comes up with a&nbsp;response (or applies an existing pattern) to the situation using his or her experience.</td>
+		<td id="16" class="trait" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Rational</td>
+		<td id="17" class="trait" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Irrational</td>
+		<td id="d17" class="description" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Takes in the incoming information directly without assessing it or&nbsp;relating it to his or her experience.</td>
+	</tr>
+	<tr>
+		<td id="d18" class="description" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Focuses on a process, finds it hard to tune out of it or tune back in. It’s typical of him or her to do the work from the beginning to the end without switching to&nbsp;something else.</td>
+		<td id="18" class="trait" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Process-oriented</td>
+		<td id="19" class="trait" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Result-oriented</td>
+		<td id="d19" class="description" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Can multi-task. It’s typical of him or&nbsp;her to divide the work into smaller portions and monitor reaching the milestones.</td>
+	</tr>
+	<tr>
+		<td id="d20" class="description" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">It’s easy to change his or her mind. Can give a head start to&nbsp;partners, consider counter-offers and compromise.</td>
+		<td id="20" class="trait" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Yielding</td>
+		<td id="21" class="trait" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Obstinate</td>
+		<td id="d21" class="description" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">It’s hard to change his or her mind&nbsp;&mdash; strong arguments are needed. Will use any measures and sources to achieve the goal. Isn’t usually keen on compromizing.</td>
+	</tr>
+	<tr>
+		<td id="d22" class="description" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Believes that one can’t foresee everything. Once in a new situation, only uses the information that is currently central, overlooking the previous experience.</td>
+		<td id="22" class="trait" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Carefree</td>
+		<td id="23" class="trait" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Farsighted</td>
+		<td id="d23" class="description" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Strives to foresee everything. Once in a new situation, prefers to use the previous experience, even if it’s not relevant to the current situation.</td>
+	</tr>
+	<tr><th colspan="4"><h4>Quadric traits</h4></th></tr>
+	<tr>
+		<td id="d24" class="description" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Doesn’t rush when it comes to&nbsp;making a decision, takes time to&nbsp;think it over. Normally he or she is&nbsp;relaxed. Finds it hard to function on the spot without external motivation.</td>
+		<td id="24" class="trait" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Reasonable</td>
+		<td id="25" class="trait" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Decisive</td>
+		<td id="d25" class="description" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Normally he or she is mobilized. When the work is done, finds it hard to relax without a ritual (say, “we-did-it!” party) or help of the others.</td>
+	</tr>
+	<tr>
+		<td id="d26" class="description" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Considering someone else’s opinion, places major importance on this person’s reputation. Relies on his or her own subjective world view.</td>
+		<td id="26" class="trait" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Subjective</td>
+		<td id="27" class="trait" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Objective</td>
+		<td id="d27" class="description" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Considering someone else’s opinion, compares it with the real facts. Believes in objective laws being true, independent of&nbsp;subjective opinions.</td>
+	</tr>
+	<tr>
+		<td id="d28" class="description" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Sees people as members of&nbsp;a&nbsp;group, hierarchy or social network rather than individuals.</td>
+		<td id="28" class="trait" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Aristocratic</td>
+		<td id="29" class="trait" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Democratic</td>
+		<td id="d29" class="description" onMouseOver="hoverOn(this)" onMouseOut="hoverOff(this)" onClick="toggle(this)">Sees people as individuals rather than members of a group, hierarchy or social network.</td>
+	</tr>
+</table>
+
+			</div>
+
+<div id="sidebar">
+<div id="scroller-anchor"></div> 
+<div id="scroller"> 
+
+			<div id="types">
+
+<table class="types">
+	<tr><th colspan="2"><h3>Sociotypes</h3></th></tr>
+	<tr><th colspan="2"><h4>All 16 of them</h4></th></tr>
+	<tr>
+		<td id="t0" class="sociotype" onMouseOver="hoverOnST(this)" onMouseOut="hoverOffST(this)" onClick="toggleST(this)">Don Quixote</td>
+		<td id="t1" class="sociotype" onMouseOver="hoverOnST(this)" onMouseOut="hoverOffST(this)" onClick="toggleST(this)">Dumas</td>
+	</tr>
+	<tr>
+		<td id="t2" class="sociotype" onMouseOver="hoverOnST(this)" onMouseOut="hoverOffST(this)" onClick="toggleST(this)">Hugo</td>
+		<td id="t3" class="sociotype" onMouseOver="hoverOnST(this)" onMouseOut="hoverOffST(this)" onClick="toggleST(this)">Robespierre</td>
+	</tr>
+	<tr>
+		<td id="t4" class="sociotype" onMouseOver="hoverOnST(this)" onMouseOut="hoverOffST(this)" onClick="toggleST(this)">Hamlet</td>
+		<td id="t5" class="sociotype" onMouseOver="hoverOnST(this)" onMouseOut="hoverOffST(this)" onClick="toggleST(this)">Maxim Gorky</td>
+	</tr>
+	<tr>
+		<td id="t6" class="sociotype" onMouseOver="hoverOnST(this)" onMouseOut="hoverOffST(this)" onClick="toggleST(this)">Zhukov</td>
+		<td id="t7" class="sociotype" onMouseOver="hoverOnST(this)" onMouseOut="hoverOffST(this)" onClick="toggleST(this)">Yesenin</td>
+	</tr>
+	<tr>
+		<td id="t8" class="sociotype" onMouseOver="hoverOnST(this)" onMouseOut="hoverOffST(this)" onClick="toggleST(this)">Napoleon</td>
+		<td id="t9" class="sociotype" onMouseOver="hoverOnST(this)" onMouseOut="hoverOffST(this)" onClick="toggleST(this)">Balzac</td>
+	</tr>
+	<tr>
+		<td id="t10" class="sociotype" onMouseOver="hoverOnST(this)" onMouseOut="hoverOffST(this)" onClick="toggleST(this)">Jack London</td>
+		<td id="t11" class="sociotype" onMouseOver="hoverOnST(this)" onMouseOut="hoverOffST(this)" onClick="toggleST(this)">Dreiser</td>
+	</tr>
+	<tr>
+		<td id="t12" class="sociotype" onMouseOver="hoverOnST(this)" onMouseOut="hoverOffST(this)" onClick="toggleST(this)">Stirlitz</td>
+		<td id="t13" class="sociotype" onMouseOver="hoverOnST(this)" onMouseOut="hoverOffST(this)" onClick="toggleST(this)">Dostoevsky</td>
+	</tr>
+	<tr>
+		<td id="t14" class="sociotype" onMouseOver="hoverOnST(this)" onMouseOut="hoverOffST(this)" onClick="toggleST(this)">Huxley</td>
+		<td id="t15" class="sociotype" onMouseOver="hoverOnST(this)" onMouseOut="hoverOffST(this)" onClick="toggleST(this)">Gabin</td>
+	</tr>
+	<tr class="gap"><td></td><td></td></tr>
+	<tr>
+		<td id="intertypeRelations" colspan="2">
+			<p>To learn how sociotypes interact with each other, refer to&nbsp;the <a href="http://en.wikipedia.org/wiki/Socionics#Intertype_relations" target="_blank" title="Table of intertype relations">table of intertype relations</a>.</p>
+		</td>
+	</tr>
+</table>
+
+			</div>
+
+			<div id="description">
+
+<table class="result">
+	<tr>
+		<td id="sociotypeDescription">
+		</td>
+	</tr>
+	<tr>
+		<td id="Twitter">
+			<p>Is this your sociotype?<br />Why don’t you <a href="https://twitter.com/share" class="twitter-share-button" data-text="My sociotype is “_enter your sociotype here_”. Learn yours:" data-via="MikhailZhilkin" data-related="MikhailZhilkin">Tweet</a></p>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</td>
+	</tr>
+	<tr>
+		<td id="Facebook">
+			<div class="fb-like" data-href="http://zhilkin.com/socio/en/" data-send="true" data-width="250" data-show-faces="true" data-font="arial"></div>
+		</td>
+	</tr>
+
+</table>
+
+			</div>
+
+</div>
+</div>
+
+			<div id="copyright">
+				<p style="border-left: 1px dotted Green; font-size: 125%; padding-left: 10px;">If you’re a designer, mobile app developer, or copywriter/editor/proof-reader,<br />and would like to get involved, drop us a line at <a href="mailto:mikhail@zhilkin.com">mikhail@zhilkin.com</a>.</p>
+				<p><span style="margin-left: -2px;"><nobr>&copy; <a href="http://www.zhilkin.com" title="Mikhail Zhilkin">Mikhail Zhilkin</a> (with the help of Helena) 2011&mdash;2012</nobr></span></p>
+			</div>
+
+		</div>
+
+<script type="text/javascript">updateSTTable();</script>
+
+	</body>
+
+</html>

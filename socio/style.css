@@ -1,0 +1,76 @@
+body { font-size: 12pt; margin: 0px; }
+
+a { color: #0055cc; }
+a:hover { color: Red; }
+.quasilink { border-bottom: 1px dotted #0055cc; color: #0055cc; cursor: pointer; display: inline-block; line-height: .9; vertical-align: baseline; }
+.quasilink:hover { border-bottom: 1px dotted Red; color: Red; }
+
+img { border: 0px; }
+
+#container { padding: 20px; width: 1200px; }
+
+#language_selector { padding: 20px; position: absolute; left: 0px; text-align: right; top: 0px; width: 1200px; }
+#header { text-align: left; width: 100%; }
+h1 { font-size: 200%; font-weight: bold; margin-top: 0px; text-align: center; }
+h2 { font-size: 150%; font-weight: bold; margin-top: -20px; text-align: center; }
+#header_left { display: inline-block; padding-right: 30px; vertical-align: top; width: 728px; }
+#header_right { display: inline-block; text-align: right; vertical-align: top; width: 438px; }
+img.appstore_badge { float: left; height: 76px; width: 180px; }
+
+#descr { border-top: 1px dotted LightGrey; vertical-align: bottom; width: 1200px; }
+#traits_descr { display: inline-block; padding-right: 20px; text-align: left; text-size: 100%; width: 580px; }
+p.left_arrow { padding-bottom: 2px; text-align: center; width: 598px; }
+#types_descr { display: inline-block; padding-left: 20px; text-align: left; text-size: 100%; width: 574px; }
+p.right_arrow { margin-left: -22px; padding-bottom: 2px; text-align: center; width: 295px; }
+
+#traits { border-right: 1px dotted LightGrey; float: left; vertical-align: top; width: 600px; }
+
+#sidebar { float: right; width: 598px; }
+#scroller { width: 598px; }
+#types { display: inline-block; vertical-align: top; width: 297px; }
+#description { display: inline-block; vertical-align: top; width: 297px; }
+ 
+table { border: 0px; border-collapse: collapse; margin: 0px; padding: 0px; }
+
+table.traits { width: 100%; }
+table.traits th { padding: 0px; }
+table.traits td { padding: 10px; }
+table.types { width: 100%; }
+table.types th { padding: 0px; }
+table.types td { padding: 10px; }
+table.result { width: 100%; }
+table.result td { padding: 10px; }
+
+table h3 { font-size: 150%; margin: 0px; padding: 0px; text-align: center; }
+table h4 { color: Grey; font-size: 100%; font-style: italic; font-weight: normal; margin: 12px 0 5px 0; text-align: center; }
+
+td.trait { color: Grey; font-size: 100%; text-align: center; width: 70px; }
+td.traitHighlight { color: Black; font-size: 100%; text-align: center; width: 70px; }
+td.traitSelect { background-color: LightGrey; color: Black; font-size: 100%; text-align: center; width: 70px; }
+td.description { color: Grey; font-size: 80%; text-align: left; width: 230px; }
+td.descriptionHighlight { color: Black; font-size: 80%; text-align: left; width: 230px; }
+td.descriptionSelect { background-color: LightGrey; color: Black; font-size: 80%; text-align: left; width: 230px; }
+
+td.sociotype { color: LightGrey; font-size: 100%; height: 60px; text-align: center; width: 100px; }
+td.sociotypeOn { color: Grey; font-size: 100%; height: 60px; text-align: center; width: 100px; }
+td.sociotypeHighlight { color: Black; font-size: 100%; height: 60px; text-align: center; width: 100px; }
+td.sociotypeSelect { background-color: LightGrey; color: Black; font-size: 100%; height: 60px; text-align: center; width: 100px; }
+
+tr.gap { height: 20px; }
+
+#intertypeRelations { padding: 10px; }
+
+#sociotypeDescription p { font-size: 80%; }
+#sociotypeDescription h3 { font-size: 150%; margin-top: -10px; text-align: center; }
+p.representatives { border-left: 1px dotted Green; padding-left: 10px; }
+
+#Twitter { padding: 10px; visibility: hidden; }
+#Twitter p { border-left: 1px dotted Green; font-size: 100%; padding-left: 10px; }
+.twitter-share-button { vertical-align: middle; }
+
+#Facebook { padding: 10px; visibility: hidden; }
+.fb_edge_comment_widget { margin-left: -157px; margin-top: -240px; }
+
+#VK { padding: 10px; visibility: hidden; }
+
+#copyright { clear: both; font-size: 80%; text-align: left; padding: 40px 0 20px 11px; width: 600px; }

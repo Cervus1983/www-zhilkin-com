@@ -1,0 +1,18 @@
+body {
+	font-family: "Open Sans", Calibri, sans-serif;
+	margin: 0px;
+}
+
+a {
+	border-bottom: 1px solid #0055cc;
+	color: #0055cc;
+	display: inline-block;
+	line-height: 1;
+	text-decoration: none;
+	vertical-align: baseline;
+}
+
+	a:hover {
+		border-bottom: 1px solid #ffffff;
+		color: firebrick;
+	}

@@ -1,0 +1,259 @@
+/*
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td { margin:0; padding:0; border:0; outline:0; font-weight:inherit; font-style:inherit; font-size:100%; font-family:inherit; vertical-align:baseline; }
+:focus { outline:0; }
+a:active { outline:none; }
+body { line-height:1; color:black; background:white; }
+ol,ul { list-style:none; }
+table { border-collapse:separate; border-spacing:0; }
+caption,th,td { text-align:left; font-weight:normal; }
+blockquote:before,blockquote:after,q:before,q:after { content:""; }
+blockquote,q { quotes:"" ""; }
+*/
+
+/*
+	Page style
+*/
+
+body { 
+	background: #efefef url(../img/background.png) repeat top center;
+	color: #434343;
+	font: normal 62.5%/1.5 Helvetica, Arial, sans-serif;
+	letter-spacing: 0;
+	padding:20px 0;
+	position: relative;
+	text-shadow: 0 1px 0 rgba(255,255,255,.8);
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+
+#container {
+	margin: 0px auto;
+	padding: 10px;
+	position: relative;
+	width: 680px;
+	z-index: 0;
+}
+
+#slideshow {
+	height: 649px;
+	margin-top: 50px;
+	position: relative;
+	width: 700px;
+}
+
+/*
+	Header
+*/
+
+#header {
+}
+
+#header h1 {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: xx-large;
+	text-align: center;
+}
+
+#header h2 {
+	font-size: large;
+	line-height: 1.5;
+	margin-top: 20px;
+	text-align: left;
+}
+
+#main{
+	margin-top: 20px;
+	position: relative;
+}
+
+#main p {
+	font-size: medium;
+}
+
+#main p.feedback {
+	font-size: medium;
+	margin-right: 257px;
+}
+
+#main p.author {
+	font-size: small;
+	margin: -10px 257px 20px 0;
+	text-align: right;
+}
+
+#main p.appstore {
+	float: right;
+	font-size: small;
+	height: 73px;
+	line-height: 1.5;
+	width: 212px;
+}
+
+#contacts {
+	padding-top: 20px;
+}
+
+#contacts p {
+	font-size: medium;
+}
+
+/*
+	Slideshow
+*/
+
+#slides {
+	left: 4px;
+	position: absolute;
+	top: 15px;
+	z-index: 100;
+}
+
+.slides_container {
+	display: none;
+	height: 579px;
+	overflow: hidden;
+	position: relative;
+	width: 262px;
+}
+
+.slides_container a {
+	display: block;
+	height: 579px;
+	width: 262px;
+}
+
+.slides_container a img {
+	display: block;
+}
+
+#screenshotText {
+	display: block;
+	left: 296px;
+	position: absolute;
+	top: 0px;
+	width: 368px;
+	z-index: 101;
+}
+
+#screenshotText p {
+	font-size: medium;
+	line-height: 1.5;
+	margin-bottom: 10px;
+}
+
+#screenshotText ul {
+	margin-left: 0px;
+	padding-left: 0px;
+}
+
+#screenshotText li {
+	font-size: small;
+	line-height: 1.5;
+	list-style-type: none;
+	margin-bottom: 5px;
+	margin-left: 10px;
+	padding-left: 0px;
+}
+
+/*
+	Next/prev buttons
+*/
+
+#slides .next, #slides .prev {
+	display: block;
+	height: 43px;
+	left: -69px;
+	position: absolute;
+	top: 206px;
+	width: 24px;
+	z-index: 101;
+}
+
+#slides .next {
+	left: 715px;
+}
+
+/*
+	Pagination
+*/
+
+.pagination {
+	margin: 0px auto 0;
+	width: 100px;
+}
+
+.pagination li {
+	float: left;
+	list-style: none;
+	margin: 0 1px;
+}
+
+.pagination li a {
+	background-image: url(../img/pagination.png);
+	background-position: 0 0;
+	display: block;
+	float: left;
+	height: 0;
+	overflow: hidden;
+	padding-top: 12px;
+	width: 12px;
+}
+
+.pagination li.current a {
+	background-position: 0 -12px;
+}
+
+/*
+	Footer
+*/
+
+#footer {
+	border-top: 1px solid #dfdfdf;
+	margin-top: 10px;
+	padding: 5px 0 20px;
+	text-align: center;
+}
+
+#footer p {
+	font-size: small;
+}
+
+#footer p.name-and-title {
+	font-size: x-small;
+}
+
+#footer p.quote {
+	margin-left: 20px;
+	text-align: left;
+}
+
+#footer td.blog {
+	border: 1px dotted #434343;
+	padding: 20px;
+}
+
+#footer p.blog-header {
+	font-size: large;
+	text-align: left;
+}
+
+#footer p.blog-quote {
+	text-align: left;
+}
+
+#footer p.blog-link {
+	text-align: right;
+}
+
+/*
+	Anchors
+*/
+
+a:link, a:visited {
+	color: #599100;
+	text-decoration: none;
+}
+
+a:hover, a:active {
+	color: #599100;
+	text-decoration: underline;
+}

@@ -1,0 +1,78 @@
+<html>
+	<head>
+		<title>Sloppy chart | Data visualisation | Mikhail Zhilkin</title>
+
+		<link rel="icon" href="http://www.zhilkin.com/mikhail_zhilkin.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="http://www.zhilkin.com/mikhail_zhilkin.ico" type="image/x-icon">
+
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet" type="text/css">
+		<link type="text/css" rel="stylesheet" href="../../common.css" />
+
+		<style>
+			body {
+				max-width: 520px;
+				padding: 16px 0 0 40px;
+			}
+
+			.caption {
+				font-size: smaller;
+				font-style: italic;
+				padding: 0 20px 20px 20px;
+				width: 480px; }
+
+			.label { font-size: 10px; }
+
+			line { vector-effect: non-scaling-stroke; }
+
+			.crisp { shape-rendering: crispEdges; }
+		</style>
+
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-337280-6']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+
+	<body>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+
+		<p>Sloppy chart is&nbsp;an&nbsp;extended version of&nbsp;the&nbsp;standard line or&nbsp;bar chart, with each line segment or&nbsp;bar representing two values instead of&nbsp;just&nbsp;one.</p>
+
+		<p>Example: you have run an&nbsp;online course, in&nbsp;which students were supposed to&nbsp;watch a&nbsp;series of&nbsp;video lectures. Naturally, not all students completed the entire course. To&nbsp;understand where they dropped out, you plot a&nbsp;bar chart:</p>
+
+		<svg width="520" height="280"><g id="fig1" transform="translate(20, 20)"></g></svg>
+		<div class="caption">Good old bar chart. Each bar represents a&nbsp;video lecture, with its height corresponding to&nbsp;the number of&nbsp;students who started watching&nbsp;it. Hover on&nbsp;a&nbsp;bar to&nbsp;see the exact number: <span id="fig1_caption"></span></div>
+
+		<p>While this bar chart shows how many students <i>started</i> watching a&nbsp;lecture, it&nbsp;doesn't show how many of&nbsp;them <i>finished</i>&nbsp;it. You know how many of&nbsp;them dropped out from lecture to&nbsp;lecture, but you don't know if&nbsp;it&nbsp;happened halfway through the lecture (perhaps they found&nbsp;it boring or&nbsp;below expectations) or&nbsp;after they finished watching&nbsp;it (perhaps they weren't committed enough and never got around to&nbsp;starting the next lecture).</p>
+
+		<p>Vice versa, if&nbsp;you show how many <i>finished</i> a&nbsp;lecture then you loose the other half of&nbsp;information.</p>
+
+		<p>You can rectify this problem by&nbsp;plotting two bars per lecture:</p>
+
+		<svg width="520" height="280"><g id="fig2" transform="translate(20, 20)"></g></svg>
+		<div class="caption">Grey bar&nbsp;&mdash; the number of&nbsp;students who started watching a&nbsp;lecture, <span style="color: firebrick;">red&nbsp;&mdash; finished.</span> Hover to&nbsp;see the exact numbers: <span id="fig2_caption"></span></span></div>
+
+		<p>The above chart shows the drop-out both during a&nbsp;lecture (difference in&nbsp;height of&nbsp;grey bar and adjacent red bar) and between lectures (red bar and the next grey bar).</p>
+		<p>This&nbsp;is an&nbsp;improvement on&nbsp;the original bar chart, but let's not stop just yet. Let's take a&nbsp;simple and effortless step towards ideal data visualisation&nbsp;&mdash; by&nbsp;removing everything which is&nbsp;unnecessary.</p>
+		<p>A&nbsp;lecture is&nbsp;a&nbsp;single step in&nbsp;our data model, however, two bars of&nbsp;the same width create a&nbsp;visual impression of&nbsp;two equally important parts. To&nbsp;resolve this contradiction between reality and its visual representation, let's merge each pair of&nbsp;bars into a&nbsp;trapezoid:</p>
+
+		<svg width="520" height="280"><g id="fig3" transform="translate(20, 20)"></g></svg>
+		<div class="caption">Each trapezoid represents a&nbsp;lecture, with the height of&nbsp;its left side corresponding to&nbsp;the number of&nbsp;students who started watching the lecture, right&nbsp;&mdash; finished. Hover&nbsp;to see the exact numbers: <span id="fig3_caption"></span></div>
+
+		<p>The gaps between bars used to&nbsp;serve a&nbsp;purpose&nbsp;&mdash; they helped&nbsp;us distinguish one bar from another. They don't represent reality, as&nbsp;we have no&nbsp;information as&nbsp;to&nbsp;whatever students do&nbsp;between watching lectures. If&nbsp;we only leave the topline of&nbsp;each trapezoid we&nbsp;can safely get rid of&nbsp;these gaps, thus only visualising what we&nbsp;<i>do</i> know:</p>
+
+		<svg width="520" height="280"><g id="fig4" transform="translate(20, 20)"></g></svg>
+		<div class="caption">The left end of&nbsp;each line segment represents the number of&nbsp;students who started watching the respective lecture, right&nbsp;&mdash; finished.</div><div class="caption">The slope of&nbsp;a&nbsp;line segment indicates the drop-out rate <span style="font-style: normal;">during</span> the lecture, gaps between segments&nbsp;&mdash; drop-out rate <span style="font-style: normal;">between</span> lectures (also projected onto y-axis in&nbsp;<span style="color: red;">red</span>).</div><div class="caption">Hover&nbsp;to see the exact numbers: <span id="fig4_caption"></span></div>
+
+		<p>And this&nbsp;is the sloppy chart.</p>
+
+		<script src="plots.js"></script>
+	</body>
+</html>
